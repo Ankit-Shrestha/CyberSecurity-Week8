@@ -12,7 +12,7 @@ Challenge Goals:
 * Cross-Site Request Forgery (CSRF)
 * Session Hijacking/Fixation
 
-Each version of the site has been differentiated by colors: blue,green, and red. Each version has two vulnerabilities which adds uptp 6 in total.
+Each version of the site has been differentiated by colors: blue,green, and red. Each version has two vulnerabilities which adds upto 6 in total.
 
 ## Blue
 
@@ -61,7 +61,7 @@ GIF Walkthrough:
 
 One of the three sites does not have CSRF protections on the admin area. A clever attacker could design a form which would automatically submit form data to the staff area and take advantage of a logged in user's access permissions. Be the attacker and design a form which will make a change to the spelling of some database content. (For example, change the first user from "James" to "Jim", or change "Alabama" to "Alabamaaaa".) Then point the form action at each of the three sites to find out which color has the vulnerability. Do not neglect to be stealthy with your form—your unsuspecting, logged-in admin should neither see the form nor the results of the form submission.
 
- * Change the CSRF token to change the user information. This workds only with the red version of the website.
+ * Change the CSRF token to change the user information. This works only with the red version of the website.
  
  GIF Walkthrough:
 <img src="https://github.com/Ankit-Shrestha/CyberSecurity-Week8/blob/master/Cross-Site-Request-Forgery.gif" width="800">
