@@ -25,14 +25,14 @@ Most of the data input received by these websites is being sanitized properly. H
 GIF Walkthrough:
 <img src="https://github.com/Ankit-Shrestha/CyberSecurity-Week8/blob/master/SQLI.gif" width="800">
 
-<b>Vulnerability #2: Session Hijacking/Fixation: </b>
+**Vulnerability #2: Session Hijacking/Fixation:**
 
 Two of the three websites expire their active sessions and require users to re-login every 30 minutes. That is probably too aggressive for the real world, but it is better than the third site which allows sessions to be a year old, and never regenerates the session ID, even when the user agent string changes. This makes it vulnerable to both session hijacking and session fixation attacks.
 
  * PHPSESSIONID from the hackertools is used after the log in. The PHPSESSIONID from one browser while in BLUE version of the website could be copied to different browsers to hijack the session.
 
 GIF Walkthrough:
-<img src="https://github.com/Ankit-Shrestha/CyberSecurity-Week8/blob/master/Session-Hijacking:Fixation-Blue.gif" width="800">
+<img src="https://github.com/Ankit-Shrestha/CyberSecurity-Week8/blob/master/Session-Hijacking.gif" width="800">
 
 ## Green
 
@@ -46,14 +46,14 @@ GIF Walkthrough:
 <img src="https://github.com/Ankit-Shrestha/CyberSecurity-Week8/blob/master/User-Enumeration.gif" width="800">
 
 
-Vulnerability #2: Cross-Site Scripting
+**Vulnerability #2: Cross-Site Scripting:**
 
 All three sites do a good job of protecting against a reflected XSS attack. However, one of the sites has a mistake which leaves the site vulnerable to a stored XSS attack. A reflected XSS attack would be easy to reveal, while a stored XSS does not provide instant feedback. You will need to log into the admin area and look through the CMS in order to "spring the trap" and find out if your attack succeeded. Determine which color has the vulnerability. Use your name in the XSS so that your results won't be confused with anyone else's (example: <script>alert('Mallory found the XSS!');</script>).
 
 * Script with alert function was passed in the feedback section, and got the pop-up window only in the green version of the website.
 
 GIF Walkthrough:
-<img src="https://github.com/Ankit-Shrestha/CyberSecurity-Week8/blob/master/Cross-Site-cripting.gif" width="800">
+<img src="https://github.com/Ankit-Shrestha/CyberSecurity-Week8/blob/master/Cross-Site-Scripting.gif" width="800">
 
 ## Red
 
@@ -67,7 +67,7 @@ One of the three sites does not have CSRF protections on the admin area. A cleve
 <img src="https://github.com/Ankit-Shrestha/CyberSecurity-Week8/blob/master/Cross-Site-Request-Forgery.gif" width="800">
  
 
-Vulnerability #2: Insecure Direct Object Reference:
+**Vulnerability #2: Insecure Direct Object Reference:**
 
 One of the three sites is missing code which would prevent some sensitive information from being made public. Determine which color has the vulnerability. Then, figure out what the other two sites did correctly to prevent the information leak.
 
